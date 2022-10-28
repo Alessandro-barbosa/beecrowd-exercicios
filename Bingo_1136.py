@@ -7,7 +7,6 @@ while True:
         chances = set()
         for i in range(b):
             for j in range(i+1, b):
-                print(bolas[i], bolas[j])
                 chances.add(abs(bolas[i] - bolas[j]))
         print('Y' if len(chances) == n else 'N')
 
