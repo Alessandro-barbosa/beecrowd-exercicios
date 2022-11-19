@@ -9,3 +9,4 @@ while True:
         print("S" if temp_vg <= temp_vf else "N")
     except EOFError:
         break
+,

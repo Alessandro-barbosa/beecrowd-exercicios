@@ -7,6 +7,14 @@ while True:
         contador_cartas = 0
         perdeuMaria = False
         perdeuJoao = False
+        if j1 > 10:
+            j1 = 10
+        if j2 > 10:
+            j2 = 10
+        if m1 > 10:
+            m1 = 10
+        if m2 > 10:
+            m2 = 10
 
         p_joao = j1 + j2
         p_maria = m1 + m2
@@ -14,16 +22,19 @@ while True:
         for i in cartas_jogadas:  # somando a pontuacao dentro das cartas que foram jogadas
             p_joao += i
             p_maria += i
-        cartas_jogadas.append(j1)
+        cartas_jogadas.append(j1)  # Adicionando as cartas que já foram sorteadas
         cartas_jogadas.append(j2)
         cartas_jogadas.append(m1)
         cartas_jogadas.append(m2)
 
         carta_maria = abs(p_maria - 23)  # carta para maria ganhar
         carta_joao = abs(p_joao - 24)  # carta para joao perder
+
         if carta_maria <= carta_joao:
             for i in cartas_jogadas:  # percorrendo a carta que falta pra ganhar dentro da lista
-                if carta_maria == i:  # de cartas jogadas
+                if i >= 10:
+                    i = 10
+                if carta_maria == i:
                     contador_cartas += 1
                 if contador_cartas >= 4:
                     i = 0
@@ -35,6 +46,8 @@ while True:
 
         else:
             for j in cartas_jogadas:  # percorrendo a carta que falta pra joao perder dentro da lista
+                if j >= 10:
+                    j = 10
                 if carta_joao == j:
                     contador_cartas += 1
                 if contador_cartas >= 4:

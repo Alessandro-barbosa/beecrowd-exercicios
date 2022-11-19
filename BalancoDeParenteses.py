@@ -1,7 +1,6 @@
 while True:
     try:
         expressao = input().strip()
-
         correct = True
         parenteses = 0
 

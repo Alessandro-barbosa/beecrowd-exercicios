@@ -1,4 +1,4 @@
-while (True):
+while True:
     lista = input().split(" ")
     contj = 0
     if len(lista) == 1:
