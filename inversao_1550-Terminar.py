@@ -17,3 +17,4 @@ for j in range(int(tam)):
     }
 
 for key, value in grafo.items():
+    print("grafo")
