@@ -10,7 +10,7 @@ for k in range(x):
         list.append(i)
     while i in range(len(list) != 1):
         for y in range(p, s):
-            print("tome")
+            print("a")
             list.pop(y)
             print(y)
             p = p - 1
